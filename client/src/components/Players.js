@@ -23,7 +23,7 @@ export class Player extends React.Component {
       return (
       <div>
         {this.state.players.map(player => 
-         <div key={player.id}>
+         <div className='playerContainer' key={player.id}>
           <h2>Name: {player.name}</h2>
           <h2>Country: {player.country}</h2>
           <h2>Searches: {player.searches}</h2>
