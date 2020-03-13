@@ -9,7 +9,6 @@ const Navigation = () => {
     };
     return (
         <nav className='navigation'>
-            <h1>Players:</h1>
             <div className='dark-mode_toggle'>
                 <div 
                 onClick={toggleMode} className={darkMode === 'dark' ? 'toggle toggled' : 'toggle'} />
