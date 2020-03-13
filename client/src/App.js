@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
-import Players from './components/Players';
+import { Player } from './components/Players';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
   return (
     <div>
-      <h1>Player List</h1>
       <Navigation />
-      <Players />
+      <Player />
     </div>
   );
 }

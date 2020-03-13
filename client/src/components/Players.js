@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-export class Players extends React.Component {
+export class Player extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -32,5 +32,3 @@ export class Players extends React.Component {
       );
     }
   }
-
-  export default Players;

@@ -2,16 +2,20 @@ import React from 'react';
 import useDarkMode from '../hooks/useDarkMode';
 
 const Navigation = () => {
-    const [darkMode, setDarkMode] = useDarkMode();
+    const [darkMode, setDarkMode] = useDarkMode(false);
     const toggleMode = event => {
         event.preventDefault();
-        setDarkMode(darkMode !== 'dark' ? 'dark':'standard');
+        setDarkMode(!darkMode);
     };
     return (
-        <nav className='navigation' data-testid='navTest'>
-            <div className='dark-mode_toggle'>
+        <nav className='navigation' 
+        data-testid='navTest'>
+            <h1 className='titleNav'>Player List</h1>
+            <div className='dark-mode__toggle'>
                 <div 
-                onClick={toggleMode} className={darkMode === 'dark' ? 'toggle toggled' : 'toggle'} />
+                onClick={toggleMode} 
+                className={darkMode ? 'toggle toggled' : 'toggle'} 
+                />
             </div>
         </nav>
     );
