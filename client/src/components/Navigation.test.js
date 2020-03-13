@@ -18,7 +18,14 @@ import { render, fireEvent } from '@testing-library/react';
       getByTestId(/navTest/i);
   });
 
-  
+  test('displays toggleTest', () => {
+    const { getByTestId } = render(<Navigation />);
+    getByTestId(/toggleTest/i);
+  });
 
+  test('displays toggleTest click', () => {
+    const { getByTestId } = render(<Navigation />);
+    const toggle = getByTestId(/toggleTest/i);
 
-
+    fireEvent.click(toggle);
+  });

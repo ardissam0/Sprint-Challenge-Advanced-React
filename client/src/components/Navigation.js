@@ -13,6 +13,7 @@ const Navigation = () => {
             <h1 className='titleNav'>Player List</h1>
             <div className='dark-mode__toggle'>
                 <div 
+                data-testid='toggleTest'
                 onClick={toggleMode} 
                 className={darkMode ? 'toggle toggled' : 'toggle'} 
                 />
